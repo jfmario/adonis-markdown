@@ -1,0 +1,30 @@
+
+import Env from '@ioc:Adonis/Core/Env'
+import { markdownConfig } from 'adonis-markdown/config'
+
+export default markdownConfig({
+
+    engine: 'default',
+    engines: {
+        default: {
+            markdownItConfig: {
+                // https://www.npmjs.com/package/markdown-it
+            }
+        }
+    },
+
+    // optionally, enable the service to manage markdown files (requires disk drive and migration)
+    enableManagedMarkdownFiles: false,
+
+    // if using managed markdown files, supply a disk drive that can be used for storing the files
+    drive: null,
+
+    // if using managed markdown files, specify the "mount" point for the ui
+    uiMountPath: "/md",
+
+    // options for the "home" link in the managed markdown ui
+    uiHomeLink: {
+        text: "Home",
+        link: "/"
+    }
+})

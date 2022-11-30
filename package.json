@@ -1,0 +1,69 @@
+{
+  "name": "adonis-markdown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "providers/MarkdownProvider.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "mrm": "mrm --preset=@adonisjs/mrm-preset"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@adonisjs/core": "^5.8.9",
+    "@adonisjs/mrm-preset": "^5.0.3",
+    "mrm": "^4.1.13"
+  },
+  "adonisjs": {
+    "instructionsMd": "./instructions.md",
+    "templates": {
+      "config": [
+        {
+          "src": "../../templates/config.txt",
+          "dest": "markdown"
+        }
+      ],
+      "migrations": [
+        {
+          "src": "../../templates/mdfile_migration.txt",
+          "dest": "1669132699150_markdown_files"
+        }
+      ],
+      "start": [
+        {
+          "src": "../../templates/routes.txt",
+          "dest": "routes/markdown"
+        }
+      ],
+      "views": [
+        {
+          "src": "../../views/managed-markdown/layouts/base.edge",
+          "dest": "adonis-markdown/managed-markdown/layouts/base.edge"
+        },
+        {
+          "src": "../../views/managed-markdown/partials/head.edge",
+          "dest": "adonis-markdown/managed-markdown/partials/head.edge"
+        },
+        {
+          "src": "../../views/managed-markdown/partials/header.edge",
+          "dest": "adonis-markdown/managed-markdown/partials/header.edge"
+        },
+        {
+          "src": "../../views/managed-markdown/index.edge",
+          "dest": "adonis-markdown/managed-markdown/index.edge"
+        }
+      ]
+    },
+    "providers": [
+      "adonis-markdown"
+    ]
+  },
+  "dependencies": {
+    "@adonisjs/lucid": "^18.3.0",
+    "@types/markdown-it": "^12.2.3",
+    "luxon": "^3.1.0",
+    "markdown-it": "^13.0.1"
+  }
+}

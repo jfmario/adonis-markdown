@@ -1,0 +1,18 @@
+@layout('adonis-markdown/managed-markdown/layouts/base')
+
+@section('body')
+
+    @include('adonis-markdown/managed-markdown/partials/header')
+    
+    <div class="p-8">
+
+        <h1 class="text-5xl">Markdown</h1>
+
+        <p>
+            @!component('adonis-markdown/managed-markdown/components/link', {
+                link: route('adonis-markdown.upload'),
+                text: 'Upload a new markdown file.'
+            })
+        </p>
+    </div>
+@end
