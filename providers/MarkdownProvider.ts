@@ -34,6 +34,9 @@ export default class MarkdownProvider {
                 Route.get('/', async function(ctx) {
                     return await MarkdownController.index(ctx)
                 }).as('index')
+                Route.get('/render/:id', async function(ctx) {
+                    return await MarkdownController.render(ctx)
+                }).as('render')
                 Route.get('/upload', async function(ctx) {
                     return await MarkdownController.upload(ctx)
                 }).as('upload')
